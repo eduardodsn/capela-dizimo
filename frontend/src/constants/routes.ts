@@ -2,6 +2,8 @@ export const ROUTES = {
   home: '/',
   comoFunciona: '/como-funciona',
   recadastramento: '/recadastramento',
+  /** Busca pública (sem login) de dizimistas por nome ou nº do carnê — mostra só nome + carnê. */
+  consultar: '/consultar',
   /**
    * Área do dizimista (login + painel) habilitada, mas sem nenhum botão/link visível apontando
    * pra cá em páginas públicas — só é alcançada por quem já tem o link direto. Ver PublicHeader,

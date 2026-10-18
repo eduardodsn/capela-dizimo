@@ -21,6 +21,7 @@ import { ScrollToTop } from '@/routes/ScrollToTop'
 import { HomePage } from '@/pages/public/HomePage'
 import { ComoFuncionaPage } from '@/pages/public/ComoFuncionaPage'
 import { RecadastramentoPage } from '@/pages/public/RecadastramentoPage'
+import { ConsultarPage } from '@/pages/public/ConsultarPage'
 import { AdminLoginPage } from '@/pages/auth/AdminLoginPage'
 import { TesourariaLoginPage } from '@/pages/auth/TesourariaLoginPage'
 import { LoginPage } from '@/pages/auth/LoginPage'
@@ -59,6 +60,10 @@ function App() {
                 <Route element={<PublicLayout />}>
                   <Route path={ROUTES.home} element={<HomePage />} />
                   <Route path={ROUTES.comoFunciona} element={<ComoFuncionaPage />} />
+                  {/* Sem login de propósito — só nome e nº do carnê aparecem, nada sensível. Sem
+                      link visível em nenhuma página pública (mesmo padrão da área do dizimista
+                      logo abaixo); só é alcançada por quem já tem o link direto. */}
+                  <Route path={ROUTES.consultar} element={<ConsultarPage />} />
                 </Route>
 
                 <Route element={<AuthLayout />}>
